@@ -1,5 +1,5 @@
-winpub
-======
+winpub 0.1.0
+============
 
 This is an inter-window communication library for the browser using localStorage.
 
