@@ -86,7 +86,9 @@
                 var originalUnload = window.onbeforeunload;
                 window.onbeforeunload = function() { 
                     localStorage.removeItem(identity);
-                    originalUnload();
+					if(originalUnload) {
+						originalUnload();
+					}
                 };
                 hasInitializedUnload = true;
             }
