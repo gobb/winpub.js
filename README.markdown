@@ -21,6 +21,3 @@ So, after cloning, run:
 
     git submodule update --init
 
-Code documentation
-==================
-Forthcoming
