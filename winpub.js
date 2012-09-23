@@ -12,10 +12,6 @@
 	// *lastSnapshot* tracks the last snapshot published by this window
 	var lastSnapshot = lastItemStored.snapshot;
 
-    // *hasInitializeUnload* tracks whether we've attached to the window's onbeforeunload event.
-    // This is used for clean up when the window is closed.
-    var hasInitializedUnload = false;
-
 	window.winpub = { 
 
 		// *options* provides the ability to customize the behavior of *winpub*.
@@ -80,18 +76,6 @@
 				setTimeout(heartbeat, heartbeatInterval);
 			}
 			heartbeat();
-
-            // Try to remove any snapshot during unload.
-            if(!hasInitializedUnload) {
-                var originalUnload = window.onbeforeunload;
-                window.onbeforeunload = function() { 
-                    localStorage.removeItem(identity);
-					if(originalUnload) {
-						originalUnload();
-					}
-                };
-                hasInitializedUnload = true;
-            }
 
 			// Build the publisher object.
 			var ensureRunning = function() { if(!running) { throw 'cannot call publish() after stop() has been called on the publisher'; } };
