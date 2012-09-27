@@ -41,7 +41,6 @@
 
 				if(now - value.heartbeat > snapshotExpiration) { 
 					// Perform garbage collection while we are gathering the snapshot
-					console.log('destroying ' + key);
 					localStorage.removeItem(key); 
 
 				} else {
