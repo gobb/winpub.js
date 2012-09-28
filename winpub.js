@@ -17,10 +17,10 @@
 		// *options* provides the ability to customize the behavior of *winpub*.
 		options: { 
 			// *snapshotExpiration* is how long snapshots may live in localStorage; checked during garbage collection.
-			snapshotExpiration: 60000, 
+			snapshotExpiration: 5000, 
 			// *heartbeatInterval* is how often publishers renew themselves with the garbage collector.
             // This value should be less than snapshotExpiration.
-			heartbeatInterval: 5000 
+			heartbeatInterval: 1000 
 		},		
 		
 		// *getAllSnapshots* gets all the snapshots published by active windows.
