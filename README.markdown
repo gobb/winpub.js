@@ -10,7 +10,7 @@ Sample usage
 
     winpub.subscribe(function(data) { console.log(data) })
 
-**Window 2
+*Window 2*
 
     winpub.publish('hello world')
 
