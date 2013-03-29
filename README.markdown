@@ -1,19 +1,17 @@
-winpub 0.1.0
+winpub 0.2.0
 ============
 
-This is an inter-window communication library for the browser using localStorage.
+Tiny example of inter-window communication the browser using localStorage.
 
 Sample usage
 ============
 
-    var publisher = winpub.createPublisher();
-    publisher.publish('hello world');
-    winpub.getAllSnapshots(); // returns ['hello world'];
+*Window 1*
 
-If other windows are publishing to winpub in the same domain, the values they've published in winpub.getAllSnapshots() as well.
+    winpub.subscribe(function(data) { console.log(data) })
 
-All that's required is the winpub.js file.
+**Window 2
 
-Website
-=======
-http://omphalos.github.com/winpub.js/
+    winpub.publish('hello world')
+
+All that's required is multiple tabs/windows and the winpub.js file.
