@@ -1,7 +1,7 @@
-winpub 0.2.0
-============
+winpub.js
+=========
 
-Tiny example of inter-window communication the browser using localStorage.
+Tiny example of inter-window communication in the browser using localStorage.
 
 Sample usage
 ============
@@ -14,4 +14,4 @@ Sample usage
 
     winpub.publish('hello world')
 
-All that's required is multiple tabs/windows and the winpub.js file.
+All that's required is multiple tabs or windows, and the winpub.js file.
